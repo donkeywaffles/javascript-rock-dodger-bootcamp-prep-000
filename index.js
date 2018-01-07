@@ -137,6 +137,7 @@ function moveDodger(e) {
   if (e.which === 37) {
     window.requestAnimationFrame(moveDodgerLeft);
   } else if (e.which === 39) {
+    e.preventDefault();
     window.requestAnimationFrame(moveDodgerRight);
   }
 })
