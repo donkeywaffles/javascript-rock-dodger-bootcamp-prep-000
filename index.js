@@ -119,7 +119,7 @@ function createRock(x) {
  */
 function endGame() {
   clearInterval(gameInterval);
-  ROCKS.remove();
+  ROCKS.forEach()
   document.removeEventListener("keydown");
   alert('YOU LOSE!');
 }
