@@ -60,9 +60,9 @@ function createRock(x) {
   rock.style.left = `${x}px`
 
   // Hmmm, why would we have used `var` here?
-  var topp = 0
+  var top = 0
 
-  rock.style.top = topp
+  rock.style.top = top
 
   /**
    * Now that we have a rock, we'll need to append
@@ -82,7 +82,7 @@ function createRock(x) {
      * If a rock collides with the DODGER,
      * we should call endGame()
      */
-    rock.style.top = `${topp += 2}px`;
+    rock.style.top = `${top += 2}px`;
     if (checkCollision(rock)) {
       endGame();
     } else if (positionToInteger(rock.style.bottom) > 0){
