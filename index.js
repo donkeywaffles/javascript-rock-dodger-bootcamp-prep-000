@@ -135,7 +135,6 @@ function moveDodger(e) {
    * we've declared for you above.)
    * And be sure to use the functions declared below!
    */
-  document.addEventListener('keydown', function(e) {
   if (e.which === LEFT_ARROW) {
     window.requestAnimationFrame(moveDodgerLeft);
   } else if (e.which === RIGHT_ARROW) {
@@ -144,7 +143,6 @@ function moveDodger(e) {
     e.preventDefault();
     e.stopPropagation();
   }
-})
 }
 
 function moveDodgerLeft() {
