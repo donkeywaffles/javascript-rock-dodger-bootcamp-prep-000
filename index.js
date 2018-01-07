@@ -135,12 +135,12 @@ function moveDodger(e) {
    */
   document.addEventListener('keydown', function(e) {
   if (e.which === LEFT_ARROW) {
-    e.preventDefault();
-    e.stopPropagation();
     window.requestAnimationFrame(moveDodgerLeft);
   } else if (e.which === RIGHT_ARROW) {
-    e.preventDefault();
     moveDodgerRight();
+  } else {
+    e.preventDefault();
+    e.stopPropagation();
   }
 })
 }
