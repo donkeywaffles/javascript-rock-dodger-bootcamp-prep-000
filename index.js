@@ -122,7 +122,7 @@ function endGame() {
   ROCKS.forEach(function(rock){
     rock.remove();
   });
-  document.removeEventListener("keydown", moveDodger);
+  window.removeEventListener("keydown", moveDodger);
   alert('YOU LOSE!');
 }
 
@@ -136,13 +136,13 @@ function moveDodger(e) {
    * And be sure to use the functions declared below!
    */
   if (e.which === LEFT_ARROW) {
-    window.requestAnimationFrame(moveDodgerLeft);
-  } else if (e.which === RIGHT_ARROW) {
-    moveDodgerRight();
-  } else {
     e.preventDefault();
     e.stopPropagation();
-  }
+    window.requestAnimationFrame(moveDodgerLeft);
+  } else if (e.which === RIGHT_ARROW) {
+    e.preventDefault();
+    moveDodgerRight();
+  } 
 }
 
 function moveDodgerLeft() {
