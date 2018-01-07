@@ -140,7 +140,7 @@ function moveDodger(e) {
     window.requestAnimationFrame(moveDodgerLeft);
   } else if (e.which === RIGHT_ARROW) {
     e.preventDefault();
-    window.requestAnimationFrame(moveDodgerRight);
+    moveDodgerRight();
   }
 })
 }
